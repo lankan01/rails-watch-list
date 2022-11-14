@@ -11,6 +11,7 @@ class BookmarksController < ApplicationController
     if @bookmark.save
       redirect_to list_path(@list)
     else
+      pp @bookmark.errors
       render :new
     end
   end
@@ -19,7 +20,7 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
 
-    # redirect_to list_path(@bookmark)
+    redirect_to list_path(@bookmark.list)
   end
 
   private

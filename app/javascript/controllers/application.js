@@ -7,6 +7,5 @@ const application = Application.start()
 application.debug = false
 window.Stimulus   = application
 
-console.log("Hello from app/javascript/application.js")
 
 export { application }
