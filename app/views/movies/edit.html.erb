@@ -1,0 +1,12 @@
+<div class="new-lists">
+  <div class="new-list">
+    <h1>Edit the <strong>movie</strong> !</h1>
+    <%= simple_form_for [ @movie ] do |f| %>
+      <%= f.input :title %>
+      <%= f.input :overview %>
+      <%= f.input :rating %>
+      <%= f.input :poster_url %>
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

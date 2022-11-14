@@ -1,1 +1,27 @@
 // Specific CSS for your home-page
+
+.banner {
+  background-image: url('https://images.unsplash.com/photo-1585647347384-2593bc35786b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+  height: 400px;
+  background-size: cover;
+
+  h1 {
+    color: black;
+    text-align: center;
+    line-height: 400px;
+    font-size: 80px;
+  }
+}
+
+// .card {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   border: 1px solid #ccc;
+//   margin-bottom: 50px;
+//   transition: 0.3s;
+
+//   &:hover {
+//     transform: scale(1.05);
+//     box-shadow: 0 0 60px -10px rgba(43, 46, 231, 0.25);
+//   }
+// }

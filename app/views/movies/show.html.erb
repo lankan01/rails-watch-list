@@ -1,0 +1,14 @@
+
+<div class="card-show-movie container">
+  <%# <%= image_tag @movie.poster_url, class:"poster-img"%>
+  <div class="card-show-movie-text">
+    <h4><strong><%= @movie.title %> • <%= @movie.rating %><i class="fas fa-star star-yellow"></i></strong></h4>
+    <p><%= @movie.overview %></p>
+    <%= link_to 'Edit', edit_movie_path(@movie), class: "btn btn-primary"  %>
+    <%= link_to "Delete",
+      movie_path(@movie),
+      turbo_method: :delete,
+      data: { confirm: "Are you sure?" } %></div>
+    </div>
+  </div>
+</div>

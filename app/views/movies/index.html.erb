@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-between">
+<h3>My Movies</h3>
+<%= link_to 'Add a movie', new_movie_path(@movie), class: "btn btn-primary"  %>
+</div>
+
+<br>
+
+<div class="movie-card container">
+  <% @movies.each do |movie| %>
+    <div class="list-group-item">
+      <div class="movie-card-text card">
+        <h4><strong><%= movie.title %> • <%= movie.rating %><i class="fas fa-star star-yellow"></i></strong></h4>
+        <p class="overflow-ellipsis"><%= movie.overview %></p>
+        <div class="show-delete">
+          <%= link_to "See more", movie_path(movie) %>
+          <%= link_to "Delete",
+                        movie_path(movie),
+                        method: :delete,
+                        data: { confirm: "Are you sure?" } %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

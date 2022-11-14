@@ -12,9 +12,9 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_11_11_091136) do
   create_table "bookmarks", force: :cascade do |t|
-    t.text "comment"
-    t.integer "movie_id"
-    t.integer "list_id"
+    t.text "comment", null: false
+    t.integer "movie_id", null: false
+    t.integer "list_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["list_id"], name: "index_bookmarks_on_list_id"
@@ -28,10 +28,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_11_091136) do
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string "title"
-    t.string "overview"
-    t.string "poster_url"
-    t.integer "rating"
+    t.string "title", null: false
+    t.string "overview", null: false
+    t.string "poster_url", null: false
+    t.integer "rating", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
