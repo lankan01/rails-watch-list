@@ -28,9 +28,15 @@
     </div>
     <div class="delete">
       <%= button_to "Delete list",
-                            list_path(@list),
-                            method: :delete,
-                            data: { confirm: "Are you sure?" }, class: "btn btn-secondary" %>
+        list_path(@list),
+        data: {
+          turbo_method: :delete,
+          turbo_confirm: "Are you sure?"
+        }, class: "btn btn-secondary" %>
+      <%= link_to "Destroy", list_path(@list), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+      } %>
     </div>
   </div>
 </div>
